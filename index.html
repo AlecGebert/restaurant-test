@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Guru Test</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-content">
+                <div class="header-content-inner">
+                    <div class="logo-wrapper">
+                        <div class="logo-image">
+                            <img src="./assets/logo.jpg" alt="logo">
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-title">Restaurant Guru</div>
+                            <div class="logo-description">Лучшие рестораны мира рядом</div>
+                        </div>
+                    </div>
+                    <form class="form">
+                        <label for="input-one">Найти:</label>
+                        <input type="text" placeholder="Рестораны" name="input-one">
+                        <label for="input-two">Где:</label>
+                        <input type="text" placeholder="Москва" name="input-two">
+                        <button class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <button class="lang-toggle"><img id="languege" src="./assets/rus.jpg" alt="rus"></button>
+                <div class="pop-up" id="ln-pop-up">
+                    <div class="pop-up-inner">
+                        <button class="close-button"><i class="fa-solid fa-xmark"></i></button>
+                        <div class="pop-up-content">
+                            <button class="pop-up-toggle rus hidden"><img id="languege3" src="./assets/rus.jpg"
+                                    alt="sp">Russian</button>
+                            <button class="pop-up-toggle en"><img id="languege1" src="./assets/en.jpg"
+                                    alt="en">English</button>
+                            <button class="pop-up-toggle sp"><img id="languege2" src="./assets/es.jpg"
+                                    alt="sp">Espanol</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="breadcrumbs">
+            <div class="breadcrumbs-content">
+                <a class="breadcrumbs-item" href="#">Главная</a>
+                /
+                <a class="breadcrumbs-item" href="#">Россия</a>
+                /
+                <a class="breadcrumbs-item" href="#">Москва</a>
+                /
+                <a class="breadcrumbs-item" href="#">Рестораны</a>
+            </div>
+        </nav>
+        <main class="main">
+            <div class="main-inner">
+                <div class="main-inner-header">
+                    <h1>Рестораны Москвы</h1>
+                    <a href="#">Все рестораны</a>
+                </div>
+                <!-- Slider -->
+                <section id="slider">
+                    <div class="slider-container">
+                        <div class="controller">
+                            <div id="controls">
+                                <button class="previous"><i class="fa-sharp fa-solid fa-angle-left"></i></button>
+                                <button class="next"><i class="fa-sharp fa-solid fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="subcontainer">
+                            <div class="slider-wrapper">
+                                <div class="my-slider">
+                                    <div>
+                                        <div class="slide">
+                                            <div class="slide-item img-1">
+                                                <div class="slide-img">
+                                                    <img src="./assets/8f6d3cf62bc9624d84d3936a2a93777b.jpg" alt="">
+                                                    <div class="work-time">Открыто до <span>00:00</span></div>
+                                                </div>
+                                                <div class="slide-info">
+                                                    <div class="slide-info-left">
+                                                        <div class="restaraunt-name">Апшерон</div>
+                                                        <div class="restaurant-number">#4 ресторан в г. Подольск</div>
+                                                        <div class="cousine">
+                                                            <div class="menu">
+                                                                <img src="./assets/restaurant_menu.jpg" alt="menu">
+                                                            </div>
+                                                            Европейская, Итальянская
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="rubles">
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="middle-price">
+                                                                <div class="receipt">
+                                                                    <img src="./assets/receipt_long.jpg" alt="receipt">
+                                                                </div>
+                                                                Средний чек: 1200₽
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slide-info-right">
+                                                        <div class="rating">
+                                                            <div class="stars"><img src="./assets/family_star.jpg"
+                                                                    alt=""></div>
+                                                            <div class="stars-count">4.2</div>
+                                                            <div class="feedbacks">(842)</div>
+                                                        </div>
+                                                        <div class="directions">
+                                                            <div class="directions-car">
+                                                                <img src="./assets/directions_car.jpg" alt="car">
+                                                            </div>
+                                                            <div class="directions-time">12 мин</div>
+                                                        </div>
+                                                        <div class="distance">6.2 км</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="slide">
+                                            <div class="slide-item img-1">
+                                                <div class="slide-img">
+                                                    <img src="./assets/8f6d3cf62bc9624d84d3936a2a93777b.jpg" alt="">
+                                                    <div class="work-time">Открыто до <span>00:00</span></div>
+                                                </div>
+                                                <div class="slide-info">
+                                                    <div class="slide-info-left">
+                                                        <div class="restaraunt-name">Апшерон</div>
+                                                        <div class="restaurant-number">#4 ресторан в г. Подольск</div>
+                                                        <div class="cousine">
+                                                            <div class="menu">
+                                                                <img src="./assets/restaurant_menu.jpg" alt="menu">
+                                                            </div>
+                                                            Европейская, Итальянская
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="rubles">
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="middle-price">
+                                                                <div class="receipt">
+                                                                    <img src="./assets/receipt_long.jpg" alt="receipt">
+                                                                </div>
+                                                                Средний чек: 1200₽
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slide-info-right">
+                                                        <div class="rating">
+                                                            <div class="stars"><img src="./assets/family_star.jpg"
+                                                                    alt=""></div>
+                                                            <div class="stars-count">4.2</div>
+                                                            <div class="feedbacks">(842)</div>
+                                                        </div>
+                                                        <div class="directions">
+                                                            <div class="directions-car">
+                                                                <img src="./assets/directions_car.jpg" alt="car">
+                                                            </div>
+                                                            <div class="directions-time">12 мин</div>
+                                                        </div>
+                                                        <div class="distance">6.2 км</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="slide">
+                                            <div class="slide-item img-1">
+                                                <div class="slide-img">
+                                                    <img src="./assets/8f6d3cf62bc9624d84d3936a2a93777b.jpg" alt="">
+                                                    <div class="work-time">Открыто до <span>00:00</span></div>
+                                                </div>
+                                                <div class="slide-info">
+                                                    <div class="slide-info-left">
+                                                        <div class="restaraunt-name">Апшерон</div>
+                                                        <div class="restaurant-number">#4 ресторан в г. Подольск</div>
+                                                        <div class="cousine">
+                                                            <div class="menu">
+                                                                <img src="./assets/restaurant_menu.jpg" alt="menu">
+                                                            </div>
+                                                            Европейская, Итальянская
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="rubles">
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="middle-price">
+                                                                <div class="receipt">
+                                                                    <img src="./assets/receipt_long.jpg" alt="receipt">
+                                                                </div>
+                                                                Средний чек: 1200₽
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slide-info-right">
+                                                        <div class="rating">
+                                                            <div class="stars"><img src="./assets/family_star.jpg"
+                                                                    alt=""></div>
+                                                            <div class="stars-count">4.2</div>
+                                                            <div class="feedbacks">(842)</div>
+                                                        </div>
+                                                        <div class="directions">
+                                                            <div class="directions-car">
+                                                                <img src="./assets/directions_car.jpg" alt="car">
+                                                            </div>
+                                                            <div class="directions-time">12 мин</div>
+                                                        </div>
+                                                        <div class="distance">6.2 км</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="slide">
+                                            <div class="slide-item img-1">
+                                                <div class="slide-img">
+                                                    <img src="./assets/8f6d3cf62bc9624d84d3936a2a93777b.jpg" alt="">
+                                                    <div class="work-time">Открыто до <span>00:00</span></div>
+                                                </div>
+                                                <div class="slide-info">
+                                                    <div class="slide-info-left">
+                                                        <div class="restaraunt-name">Апшерон</div>
+                                                        <div class="restaurant-number">#4 ресторан в г. Подольск</div>
+                                                        <div class="cousine">
+                                                            <div class="menu">
+                                                                <img src="./assets/restaurant_menu.jpg" alt="menu">
+                                                            </div>
+                                                            Европейская, Итальянская
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="rubles">
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="middle-price">
+                                                                <div class="receipt">
+                                                                    <img src="./assets/receipt_long.jpg" alt="receipt">
+                                                                </div>
+                                                                Средний чек: 1200₽
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slide-info-right">
+                                                        <div class="rating">
+                                                            <div class="stars"><img src="./assets/family_star.jpg"
+                                                                    alt=""></div>
+                                                            <div class="stars-count">4.2</div>
+                                                            <div class="feedbacks">(842)</div>
+                                                        </div>
+                                                        <div class="directions">
+                                                            <div class="directions-car">
+                                                                <img src="./assets/directions_car.jpg" alt="car">
+                                                            </div>
+                                                            <div class="directions-time">12 мин</div>
+                                                        </div>
+                                                        <div class="distance">6.2 км</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="slide">
+                                            <div class="slide-item img-1">
+                                                <div class="slide-img">
+                                                    <img src="./assets/8f6d3cf62bc9624d84d3936a2a93777b.jpg" alt="">
+                                                    <div class="work-time">Открыто до <span>00:00</span></div>
+                                                </div>
+                                                <div class="slide-info">
+                                                    <div class="slide-info-left">
+                                                        <div class="restaraunt-name">Апшерон</div>
+                                                        <div class="restaurant-number">#4 ресторан в г. Подольск</div>
+                                                        <div class="cousine">
+                                                            <div class="menu">
+                                                                <img src="./assets/restaurant_menu.jpg" alt="menu">
+                                                            </div>
+                                                            Европейская, Итальянская
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="rubles">
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                                <i class="fa fa-rub" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="middle-price">
+                                                                <div class="receipt">
+                                                                    <img src="./assets/receipt_long.jpg" alt="receipt">
+                                                                </div>
+                                                                Средний чек: 1200₽
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="slide-info-right">
+                                                        <div class="rating">
+                                                            <div class="stars"><img src="./assets/family_star.jpg"
+                                                                    alt=""></div>
+                                                            <div class="stars-count">4.2</div>
+                                                            <div class="feedbacks">(842)</div>
+                                                        </div>
+                                                        <div class="directions">
+                                                            <div class="directions-car">
+                                                                <img src="./assets/directions_car.jpg" alt="car">
+                                                            </div>
+                                                            <div class="directions-time">12 мин</div>
+                                                        </div>
+                                                        <div class="distance">6.2 км</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Slider End -->
+            </div>
+
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
