@@ -335,6 +335,8 @@ label:nth-of-type(2) {
 
 .slide-item {
     width: 100%;
+    position: relative;
+    cursor: pointer;
 }
 
 .slide-img {
@@ -539,6 +541,14 @@ label:nth-of-type(2) {
 
 .hidden {
     display: none;
+}
+
+.slide-item-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Slider End */
